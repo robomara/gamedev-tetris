@@ -1,0 +1,29 @@
+ <!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Tetris</title>
+		<script src="js/phaser.js"></script>
+		<script src="js/boot.js"></script>
+		<script src="js/main.js"></script>
+		<style>
+			body{
+				padding: 0px;
+				margin: 0px;
+				background: grey;
+			}
+			
+		</style>  
+	</head>
+
+	<body>
+		<script>
+			var game = new Phaser.Game(480, 640, Phaser.AUTO);
+
+			game.state.add('boot',boot);
+			game.state.add('main',main);
+			game.state.start('boot');
+
+		</script>
+	</body>
+</html>
